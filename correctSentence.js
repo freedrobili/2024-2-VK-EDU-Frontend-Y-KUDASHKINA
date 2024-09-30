@@ -18,5 +18,18 @@ correctSentence("Greetings, friends.") == "Greetings, friends."
  */
 
 function correctSentence(text) {
+    const capitalizedText = text.charAt(0).toUpperCase() + text.slice(1);
 
+    if (capitalizedText.charAt(capitalizedText.length - 1) !== '.'){
+        return capitalizedText + '.';
+    }
+
+    return capitalizedText;
 }
+
+
+export default correctSentence;
+
+// console.log(correctSentence("greetings, friends")); // "Greetings, friends."
+// console.log(correctSentence("Greetings, friends")); // "Greetings, friends."
+// console.log(correctSentence("Greetings, friends.")); // "Greetings, friends."
