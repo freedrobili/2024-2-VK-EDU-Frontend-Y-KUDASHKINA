@@ -7,10 +7,7 @@
  * convertBytesToHuman(5) === '5 B'
  */
 
-// convertBytesToHuman.test.js
-import convertBytesToHuman from './convertBytesToHuman'; // Убедитесь, что путь к файлу правильный
-
-
+import convertBytesToHuman from './convertBytesToHuman';
 
 
 test('Возвращает false для неправильного типа данных', () => {
