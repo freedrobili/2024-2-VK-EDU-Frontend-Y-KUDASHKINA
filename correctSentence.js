@@ -18,6 +18,8 @@ correctSentence("Greetings, friends.") == "Greetings, friends."
  */
 
 function correctSentence(text) {
+    if (text === '') return '';
+
     const capitalizedText = text.charAt(0).toUpperCase() + text.slice(1);
 
     if (capitalizedText.charAt(capitalizedText.length - 1) !== '.'){

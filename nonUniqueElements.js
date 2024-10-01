@@ -25,13 +25,14 @@ nonUniqueElements([10, 9, 10, 10, 9, 8]) == [10, 9, 10, 10, 9]
  */
 
 function nonUniqueElements(data) {
-    const elementCounts = data.reduce((acc, elem) => {
-        acc[elem] = (acc[elem] || 0) + 1;
+    const elementRepeats = data.reduce((acc, elem) => {
+        acc[elem] = acc[elem] === true || acc[elem] === undefined ? false : true;
         return acc;
     }, {});
 
-    return data.filter(elem => elementCounts[elem] > 1);
+    return data.filter(elem => !elementRepeats[elem]);
 }
+
 export default nonUniqueElements;
 
 // console.log(nonUniqueElements([1, 2, 3, 1, 3])); // [1, 3, 1, 3]
